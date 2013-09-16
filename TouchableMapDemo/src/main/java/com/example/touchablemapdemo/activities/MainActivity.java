@@ -1,11 +1,13 @@
 package com.example.touchablemapdemo.activities;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 
 import com.example.touchablemapdemo.R;
+import com.example.touchablemapdemo.debugging.GoogleMapsDebugger;
 import com.example.touchablemapdemo.layouts.TouchableFrameLayout;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -14,6 +16,7 @@ public class MainActivity extends FragmentActivity
         implements TouchableFrameLayout.OnChangeListener {
 
     private GoogleMap mMap;
+    private GoogleMapsDebugger mGoogleMapsDebugger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class MainActivity extends FragmentActivity
             mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
                     .getMap();
             if (mMap != null) {
+                mGoogleMapsDebugger = new GoogleMapsDebugger(mMap);
                 // TODO: Add markers
             }
         }
@@ -48,5 +52,6 @@ public class MainActivity extends FragmentActivity
     @Override
     public void onInteractionEnd() {
         Log.i(MainActivity.class.getName(), "onInteractionEnd");
+        mGoogleMapsDebugger.drawBoundingBox(Color.YELLOW);
     }
 }
