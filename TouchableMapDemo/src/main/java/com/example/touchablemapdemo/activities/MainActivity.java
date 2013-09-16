@@ -2,13 +2,16 @@ package com.example.touchablemapdemo.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Menu;
 
 import com.example.touchablemapdemo.R;
+import com.example.touchablemapdemo.layouts.TouchableFrameLayout;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity
+        implements TouchableFrameLayout.OnChangeListener {
 
     private GoogleMap mMap;
 
@@ -42,4 +45,8 @@ public class MainActivity extends FragmentActivity {
         return true;
     }
 
+    @Override
+    public void onInteractionEnd() {
+        Log.i(MainActivity.class.getName(), "onInteractionEnd");
+    }
 }
