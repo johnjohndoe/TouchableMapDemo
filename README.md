@@ -10,6 +10,12 @@ The screenshot shows the not-so-up-to-date rectangle.
 ![TouchableMapDemo][4]
 
 
+Configuration
+---------------
+* Please mind you need to add your own API key for Google Maps v2 before running the app.
+  Add the key here: `/TouchableMapDemo/src/main/res/values/config.xml`
+
+
 References
 ----------
 * [How can I handle map move end using Google Maps for Android V2?][2]
