@@ -33,6 +33,6 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 3.0 Unpor
 [1]: http://developers.google.com/maps/documentation/android/
 [2]: http://stackoverflow.com/questions/13702117/how-can-i-handle-map-move-end-using-google-maps-for-android-v2
 [3]: http://code.google.com/p/gmaps-api-issues/issues/detail?id=4636
-[4]: http://github.com/johnjohndoe/TouchableMapDemo/raw/master/screenshot.png
+[4]: screenshot.png
 [5]: http://creativecommons.org/licenses/by-sa/3.0/
 [6]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
